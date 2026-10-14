@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+:root {
+  --sk-bg: #090d16;
+  --sk-card: #111827;
+  --sk-card2: #1e293b;
+  --sk-card3: #0f172a;
+  --sk-border: rgba(255, 255, 255, 0.1);
+  --sk-border2: rgba(255, 255, 255, 0.16);
+  --sk-text: #f8fafc;
+  --sk-text2: #e2e8f0;
+  --sk-muted: #94a3b8;
+  --sk-dim: #64748b;
+  --sk-faint: #475569;
+  --sk-grid: rgba(255, 255, 255, 0.05);
+}
+
+.light-theme {
+  --sk-bg: #f3f6f4;
+  --sk-card: #ffffff;
+  --sk-card2: #f8fafc;
+  --sk-card3: #f1f5f9;
+  --sk-border: rgba(0, 0, 0, 0.08);
+  --sk-border2: rgba(0, 0, 0, 0.14);
+  --sk-text: #0f172a;
+  --sk-text2: #1e293b;
+  --sk-muted: #475569;
+  --sk-dim: #64748b;
+  --sk-faint: #94a3b8;
+  --sk-grid: rgba(0, 0, 0, 0.06);
+}
+
+/* Custom mobile scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}
+
+/* Mobile-feel utilities */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  user-select: text;
+  background-color: var(--sk-bg);
+  color: var(--sk-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", "Helvetica Neue", sans-serif;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.88; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s infinite ease-in-out;
+}
+
+/* Print styles for browsers and mobile devices */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 8mm 12mm 8mm;
+  }
+
+  /* Universal high-contrast print reset */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10.5pt !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide app navigation header, mobile bottom dock, floating quick-add and interactive controls */
+  header,
+  nav,
+  button,
+  input,
+  select,
+  .no-print,
+  .print-hide,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* When printing from a printable modal or page containing #printable-farm-report */
+  body:has(#printable-farm-report) header,
+  body:has(#printable-farm-report) nav,
+  body:has(#printable-farm-report) main > *:not(:has(#printable-farm-report)) {
+    display: none !important;
+  }
+
+  /* Transparent overlay container so only report paper prints */
+  [role="dialog"],
+  .fixed.inset-0 {
+    position: static !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    overflow: visible !important;
+    max-height: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+  }
+
+  /* Printable statement card */
+  #printable-farm-report,
+  .printable-area {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  /* Make sure container heights do not clip pages */
+  #root,
+  main,
+  div {
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  /* Crisp table border styling */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+  }
+
+  th, td {
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  /* Avoid splitting table rows or summary boxes across page cuts */
+  tr,
+  .summary-card,
+  .avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}

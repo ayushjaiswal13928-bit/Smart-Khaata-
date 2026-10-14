@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18a34a" />
+      <stop offset="100%" stop-color="#14833b" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#064e22" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)" />
+
+  <!-- Outer House Roof & Elements -->
+  <g filter="url(#shadow)">
+    <!-- Chimney -->
+    <rect x="304" y="112" width="28" height="56" rx="4" fill="#ffffff" />
+    <rect x="298" y="106" width="40" height="10" rx="3" fill="#ffffff" />
+
+    <!-- Roof Gables -->
+    <path d="M 256 92 L 132 200 L 148 214 L 256 120 L 364 214 L 380 200 Z" fill="#ffffff" />
+
+    <!-- Leaves on the right of roof -->
+    <!-- Leaf 1 (Large) -->
+    <path d="M 370 200 C 370 145 425 125 435 125 C 435 175 395 205 370 200 Z" fill="#ffffff" />
+    <path d="M 374 196 Q 398 168 430 130" stroke="#18a34a" stroke-width="3" fill="none" stroke-linecap="round" />
+    <!-- Leaf 2 (Small) -->
+    <path d="M 390 205 C 400 175 440 170 445 170 C 445 200 415 215 390 205 Z" fill="#ffffff" />
+
+    <!-- 4-Pane Attic Window -->
+    <rect x="230" y="150" width="22" height="22" rx="3" fill="#ffffff" />
+    <rect x="258" y="150" width="22" height="22" rx="3" fill="#ffffff" />
+    <rect x="230" y="178" width="22" height="22" rx="3" fill="#ffffff" />
+    <rect x="258" y="178" width="22" height="22" rx="3" fill="#ffffff" />
+
+    <!-- Notebook Outline -->
+    <!-- Outer cover border -->
+    <path d="M 124 220 C 132 216 190 216 256 242 C 322 216 380 216 388 220 C 396 224 400 234 400 248 L 400 396 C 400 408 392 416 382 414 C 340 406 295 410 256 432 C 217 410 172 406 130 414 C 120 416 112 408 112 396 L 112 248 C 112 234 116 224 124 220 Z" fill="#ffffff" />
+
+    <!-- Inner cutout forming the book page surface -->
+    <path d="M 134 236 C 142 232 195 232 256 256 C 317 232 370 232 378 236 C 383 238 386 244 386 254 L 386 386 C 350 380 305 385 256 410 C 207 385 162 380 126 386 L 126 254 C 126 244 129 238 134 236 Z" fill="#18a34a" />
+
+    <!-- Ribbon marker hanging at bottom center -->
+    <path d="M 248 424 L 248 444 L 256 438 L 264 444 L 264 424 Z" fill="#ffffff" />
+
+    <!-- Spiral Rings on Left edge -->
+    <rect x="100" y="248" width="26" height="12" rx="6" fill="#ffffff" />
+    <rect x="100" y="286" width="26" height="12" rx="6" fill="#ffffff" />
+    <rect x="100" y="324" width="26" height="12" rx="6" fill="#ffffff" />
+    <rect x="100" y="362" width="26" height="12" rx="6" fill="#ffffff" />
+
+    <!-- Book Spine center fold line -->
+    <line x1="256" y1="262" x2="256" y2="400" stroke="#14833b" stroke-width="4" stroke-linecap="round" />
+
+    <!-- SK Typography in White -->
+    <!-- Letter S -->
+    <path d="M 242 278 L 195 278 C 172 278 162 290 162 306 C 162 324 175 334 198 338 L 214 341 C 228 344 234 350 234 358 C 234 368 224 374 206 374 C 185 374 172 366 160 354 L 146 372 C 162 390 182 398 208 398 C 238 398 258 382 258 358 C 258 338 244 326 220 322 L 204 319 C 192 316 186 312 186 304 C 186 296 194 292 206 292 L 242 292 Z" fill="#ffffff" />
+
+    <!-- Letter K -->
+    <path d="M 276 278 L 276 396 L 300 396 L 300 348 L 334 396 L 362 396 L 320 338 L 360 278 L 332 278 L 300 326 L 300 278 Z" fill="#ffffff" />
+  </g>
+</svg>

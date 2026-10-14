@@ -1,0 +1,6 @@
+{
+  "name": "Smart Khaata - Mobile Business & Farm Manager",
+  "description": "स्मार्ट खाता मोबाइल ऐप: खेती (फसल, खर्च, बिक्री, Khet), मकान किराया (मीटर रीडिंग, WhatsApp बिल), घर खर्च और Gemini AI सलाहकार व फोटो स्कैनर।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
